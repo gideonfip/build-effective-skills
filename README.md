@@ -7,16 +7,22 @@ Two production-ready AI skills for building skills that actually work — not ju
 If an AI agent is reading this repo, here's what to do:
 
 ```bash
-# 1. Copy skills to OpenCode skills directory
+# === OpenCode ===
 cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
 cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
 
-# 2. Restart OpenCode
+# OR === Claude Code (.claude/) ===
+cp -r signal-skill-framework ~/.claude/skills/
+cp -r skill-creator ~/.claude/skills/
 
-# 3. Use in conversation:
-/signal-skill-framework  # Plan what to build
-/skill-creator         # Build and test it
+# OR === Agents (.agents/) ===
+cp -r signal-skill-framework ~/.agents/skills/
+cp -r skill-creator ~/.agents/skills/
 ```
+
+Then use:
+- `/signal-skill-framework` — Plan what to build
+- `/skill-creator` — Build and test it
 
 ---
 
@@ -47,6 +53,55 @@ Execution layer for building and testing skills:
 - Package skills for distribution
 
 **Triggers:** `/skill-creator`, "build this skill", "create skill from"
+
+---
+
+## Installation by System
+
+| System | Skills Folder | Command |
+|--------|------------|---------|
+| **OpenCode** | `~/.opencode/skills/` | `cp -r * ~/Library/Application\ Support/opencode/skills/` |
+| **Claude Code** | `.claude/skills/` | `cp -r * ~/.claude/skills/` |
+| **Agents** | `.agents/skills/` | `cp -r * ~/.agents/skills/` |
+
+### By OS
+
+```bash
+# === macOS ===
+# OpenCode
+cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
+# Claude Code
+cp -r signal-skill-framework ~/.claude/skills/
+cp -r skill-creator ~/.claude/skills/
+# Agents
+cp -r signal-skill-framework ~/.agents/skills/
+cp -r skill-creator ~/.agents/skills/
+
+# === Linux ===
+# OpenCode
+cp -r signal-skill-framework ~/.local/share/opencode/skills/
+cp -r skill-creator ~/.local/share/opencode/skills/
+# Claude Code
+cp -r signal-skill-framework ~/.claude/skills/
+cp -r skill-creator ~/.claude/skills/
+# Agents
+cp -r signal-skill-framework ~/.agents/skills/
+cp -r skill-creator ~/.agents/skills/
+
+# === Windows (PowerShell) ===
+# OpenCode
+Copy-Item -Recurse signal-skill-framework "$env:APPDATA\opencode\skills\"
+Copy-Item -Recurse skill-creator "$env:APPDATA\opencode\skills\"
+# Claude Code
+Copy-Item -Recurse signal-skill-framework "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skill-creator "$env:USERPROFILE\.claude\skills\"
+# Agents
+Copy-Item -Recurse signal-skill-framework "$env:USERPROFILE\.agents\skills\"
+Copy-Item -Recurse skill-creator "$env:USERPROFILE\.agents\skills\"
+```
+
+Then restart your AI tool.
 
 ---
 
@@ -101,7 +156,7 @@ Step-by-step instructions...
 
 ## Requirements
 
-- OpenCode (CLI or Code)
+- Any AI tool with skills support (OpenCode, Claude Code, Agents, etc.)
 - Python 3.x (for evaluation scripts)
 - Subagents enabled (optional, for parallel tests)
 
