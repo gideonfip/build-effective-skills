@@ -6,9 +6,14 @@ Copy and paste this entire block into your AI conversation:
 
 **SYSTEM PROMPT:**
 
-I have a skill package called "Create Effective Skills" at this path:
+I have a skill package called "Create Effective Skills".
 
-`/Users/youtube/Documents/GitHub/public/create-effective-skills`
+**Replace `[PATH_TO_EXTRACTED_FOLDER]` with your actual folder path.**
+
+For example:
+- macOS: `/Users/YOURNAME/Downloads/create-effective-skills`
+- Linux: `~/Downloads/create-effective-skills`
+- Windows: `C:\Users\YOURNAME\Downloads\create-effective-skills`
 
 It contains two skills:
 - `signal-skill-framework/` — Strategic planning
@@ -19,13 +24,13 @@ Please install both into my skills folder.
 **Steps to run:**
 
 ```bash
-# Find skills directory and copy both skills
-SKILLS_PATH="/path/to/your/skills/folder"
+# Replace this placeholder with your actual folder path
+SOURCE="[PATH_TO_EXTRACTED_FOLDER]"
 
-# OpenCode
+# OpenCode (macOS)
 mkdir -p ~/Library/Application\ Support/opencode/skills/
-cp -r /Users/youtube/Documents/GitHub/public/create-effective-skills/signal-skill-framework ~/Library/Application\ Support/opencode/skills/
-cp -r /Users/youtube/Documents/GitHub/public/create-effective-skills/skill-creator ~/Library/Application\ Support/opencode/skills/
+cp -r $SOURCE/signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r $SOURCE/skill-creator ~/Library/Application\ Support/opencode/skills/
 
 # Verify
 ls ~/Library/Application\ Support/opencode/skills/
@@ -45,30 +50,32 @@ ls ~/Library/Application\ Support/opencode/skills/
 ### Quick Commands by System
 
 ```bash
+# Replace [PATH_TO_EXTRACTED_FOLDER] with your actual path
+
 # === OpenCode (macOS) ===
-cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
-cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/Library/Application\ Support/opencode/skills/
 
 # === OpenCode (Linux) ===
-cp -r signal-skill-framework ~/.local/share/opencode/skills/
-cp -r skill-creator ~/.local/share/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.local/share/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.local/share/opencode/skills/
 
 # === OpenCode (Windows) ===
-xcopy signal-skill-framework %APPDATA%\opencode\skills\
-xcopy skill-creator %APPDATA%\opencode\skills\
+xcopy [PATH_TO_EXTRACTED_FOLDER]\signal-skill-framework %APPDATA%\opencode\skills\
+xcopy [PATH_TO_EXTRACTED_FOLDER]\skill-creator %APPDATA%\opencode\skills\
 
 # === Claude Code (.claude/skills/) ===
-cp -r signal-skill-framework ~/.claude/skills/
-cp -r skill-creator ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.claude/skills/
 
 # === Agents (.agents/skills/) ===
-cp -r signal-skill-framework ~/.agents/skills/
-cp -r skill-creator ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.agents/skills/
 
 # === Project-specific (in repo root) ===
 mkdir -p skills
-cp -r signal-skill-framework skills/
-cp -r skill-creator skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator skills/
 ```
 
 ---

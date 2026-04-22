@@ -4,20 +4,20 @@ Two production-ready AI skills for building skills that actually work — not ju
 
 ## Quick Start (For AI Agents)
 
-If an AI agent is reading this repo, here's what to do:
+**Replace `[PATH_TO_EXTRACTED_FOLDER]` with your actual folder path.**
 
 ```bash
 # === OpenCode ===
-cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
-cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/Library/Application\ Support/opencode/skills/
 
 # OR === Claude Code (.claude/) ===
-cp -r signal-skill-framework ~/.claude/skills/
-cp -r skill-creator ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.claude/skills/
 
 # OR === Agents (.agents/) ===
-cp -r signal-skill-framework ~/.agents/skills/
-cp -r skill-creator ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.agents/skills/
 ```
 
 Then use:
@@ -67,38 +67,40 @@ Execution layer for building and testing skills:
 ### By OS
 
 ```bash
+# Replace [PATH_TO_EXTRACTED_FOLDER] with your actual path
+
 # === macOS ===
 # OpenCode
-cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
-cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/Library/Application\ Support/opencode/skills/
 # Claude Code
-cp -r signal-skill-framework ~/.claude/skills/
-cp -r skill-creator ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.claude/skills/
 # Agents
-cp -r signal-skill-framework ~/.agents/skills/
-cp -r skill-creator ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.agents/skills/
 
 # === Linux ===
 # OpenCode
-cp -r signal-skill-framework ~/.local/share/opencode/skills/
-cp -r skill-creator ~/.local/share/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.local/share/opencode/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.local/share/opencode/skills/
 # Claude Code
-cp -r signal-skill-framework ~/.claude/skills/
-cp -r skill-creator ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.claude/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.claude/skills/
 # Agents
-cp -r signal-skill-framework ~/.agents/skills/
-cp -r skill-creator ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/signal-skill-framework ~/.agents/skills/
+cp -r [PATH_TO_EXTRACTED_FOLDER]/skill-creator ~/.agents/skills/
 
 # === Windows (PowerShell) ===
 # OpenCode
-Copy-Item -Recurse signal-skill-framework "$env:APPDATA\opencode\skills\"
-Copy-Item -Recurse skill-creator "$env:APPDATA\opencode\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\signal-skill-framework "$env:APPDATA\opencode\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\skill-creator "$env:APPDATA\opencode\skills\"
 # Claude Code
-Copy-Item -Recurse signal-skill-framework "$env:USERPROFILE\.claude\skills\"
-Copy-Item -Recurse skill-creator "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\signal-skill-framework "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\skill-creator "$env:USERPROFILE\.claude\skills\"
 # Agents
-Copy-Item -Recurse signal-skill-framework "$env:USERPROFILE\.agents\skills\"
-Copy-Item -Recurse skill-creator "$env:USERPROFILE\.agents\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\signal-skill-framework "$env:USERPROFILE\.agents\skills\"
+Copy-Item -Recurse [PATH_TO_EXTRACTED_FOLDER]\skill-creator "$env:USERPROFILE\.agents\skills\"
 ```
 
 Then restart your AI tool.
