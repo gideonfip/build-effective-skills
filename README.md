@@ -1,6 +1,6 @@
 # Create Effective Skills
 
-Two production-ready AI skills for building skills that actually work — not just prompt-guessing.
+Build effective Skills for any platform where you can invoke at any time with a slash command.
 
 ## Quick Start (For AI Agents)
 
