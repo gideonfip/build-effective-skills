@@ -1,138 +1,143 @@
 # Create Effective Skills
 
-Two powerful skills to help you create production-ready AI skills that actually work.
+Two production-ready AI skills for building skills that actually work — not just prompt-guessing.
+
+## Quick Start (For AI Agents)
+
+If an AI agent is reading this repo, here's what to do:
+
+```bash
+# 1. Copy skills to OpenCode skills directory
+cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
+cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
+
+# 2. Restart OpenCode
+
+# 3. Use in conversation:
+/signal-skill-framework  # Plan what to build
+/skill-creator         # Build and test it
+```
+
+---
 
 ## What's Included
 
 ### 1. Signal Skill Framework (`signal-skill-framework/`)
 
-A strategic thinking partner that guides you through the SIGNAL methodology:
+Strategic thinking partner using the SIGNAL methodology:
 
-| Phase | Action | Purpose |
-|-------|-------|---------|
-| **S** | Spot the Bottleneck | Identify soul-sucking repetitive tasks |
-| **I** | Integrate the Stack | Select minimal tools needed |
-| **G** | Guide the Agent | Train the AI step-by-step |
-| **N** | Nail the Standard | Achieve gold-standard runs |
-| **A** | Automate the Logic | Codeify the skill |
-| **L** | Loop Recursively | Test → Fail → Fix → Repeat |
+| Phase | Meaning |
+|------|---------|
+| **S**pot | Identify soul-sucking repetitive tasks |
+| **I**ntegrate | Select minimal tools needed |
+| **G**uide | Train the AI step-by-step |
+| **N**ail | Achieve gold-standard runs |
+| **A**utomate | Codeify the skill |
+| **L**oop | Test → Fail → Fix → Repeat |
 
-**Use when:** You want to create a new skill or automate a workflow. It's your thought partner to move from "prompt-guessing" to "skill-architecting."
+**Triggers:** `/signal-skill-framework`, "create a skill", "build an automation"
 
 ### 2. Skill Creator (`skill-creator/`)
 
-The execution layer for building and testing skills:
+Execution layer for building and testing skills:
 
-- Write and edit SKILL.md files
-- Run test cases and benchmarks
+- Write/edit SKILL.md files
+- Run test cases and benchmarks  
 - Create evaluation viewers
-- Optimize skill descriptions for better triggering
 - Package skills for distribution
 
-**Use when:** You're ready to build, test, and refine your skill.
+**Triggers:** `/skill-creator`, "build this skill", "create skill from"
 
 ---
 
-## Installation
+## The Workflow
 
-### Option A: Copy to OpenCode Skills Directory
+```
+[Have a repetitive task] → /signal-skill-framework → /skill-creator → test → iterate → package
+```
 
-1. Locate your OpenCode skills directory (typically `~/.opencode/skills/` or `~/Library/Application Support/opencode/skills/`)
-2. Copy both folders into your skills directory:
-   ```bash
-   cp -r signal-skill-framework ~/Library/Application\ Support/opencode/skills/
-   cp -r skill-creator ~/Library/Application\ Support/opencode/skills/
-   ```
-3. Restart OpenCode to load the new skills
-
-### Option B: Reference Without Installing
-
-You can reference these skills by their full path without copying:
-- `signal-skill-framework`: `/path/to/create-effective-skills/signal-skill-framework`
-- `skill-creator`: `/path/to/create-effective-skills/skill-creator`
+| Step | Skill | What it does |
+|------|-------|-------------|
+| 1 | Signal Framework | Clarify what to build and why |
+| 2 | Skill Creator | Execute, write SKILL.md, test |
+| 3 | Iterate | Improve based on feedback |
+| 4 | Package | Export as distributable |
 
 ---
 
-## How to Use
-
-### Step 1: Plan with Signal Framework
-
-Start a conversation and invoke the signal skill:
-```
-/signal-skill-framework
-```
-
-The skill will walk you through each SIGNAL phase to clarify what you want to build and why.
-
-### Step 2: Build with Skill Creator
-
-When you're ready to execute, hand off to:
-```
-/skill-creator
-```
-
-This skill handles:
-1. **Capturing intent** - What should the skill do? When should it trigger?
-2. **Writing the SKILL.md** - Draft the skill file with proper structure
-3. **Creating test cases** - Design realistic prompts to test against
-4. **Running evaluations** - Execute tests with and without the skill
-5. **Benchmarking** - Compare results quantitatively
-6. **Iterating** - Improve based on feedback
-7. **Packaging** - Export as a distributable skill file
-
-### The Workflow
-
-```
-signal-skill-framework (plan) → skill-creator (build) → test → iterate → package
-```
-
-### What You Can Create
-
-- **File transformation skills** - Convert between formats, extract data, batch process
-- **Research skills** - Search, summarize, analyze content
-- ** workflow automation** - Multi-step processes with APIs and tools
-- **Code generation skills** - Scaffold projects, write tests, refactor
-- **Documentation skills** - Generate docs from code, format output
-
----
-
-## Skill Anatomy
-
-Both skills follow the OpenCode skill structure:
+## Skill Anatomy (For Reference)
 
 ```
 skill-name/
-├── SKILL.md           # Required - triggers and instructions
-├── prompts/          # Optional - additional prompt files
-├── scripts/         # Optional - executable code
-├── references/      # Optional - documentation
-└── assets/         # Optional - templates, icons
+├── SKILL.md              # Required - triggers and instructions
+├── prompts/              # Optional - additional prompt files  
+├── scripts/              # Optional - executable code
+├── references/          # Optional - documentation
+└── assets/              # Optional - templates, icons
 ```
 
----
+### SKILL.md Required Fields
 
-## Tips for Success
+```markdown
+# Skill Name
 
-1. **Start small** - Don't try to automate everything at once
-2. **Test relentlessly** - Run 5+ iterations before calling it done
-3. **Use real prompts** - Test with prompts users would actually type
-4. **Iterate on feedback** - Every failure teaches you something
-5. **Generalize** - Build for a million use cases, not just your current one
+**Trigger phrases:** /skill-name, "when I say X"
+
+**Description:** What this skill does (1-2 sentences)
+
+## When to use
+- Situation 1
+- Situation 2
+
+## How it works
+Step-by-step instructions...
+
+## Example prompts
+- "Do X"
+- "Do Y"
+```
 
 ---
 
 ## Requirements
 
 - OpenCode (CLI or Code)
-- Python 3.x (for benchmarking scripts in skill-creator)
-- Subagents enabled (for parallel test execution)
+- Python 3.x (for evaluation scripts)
+- Subagents enabled (optional, for parallel tests)
 
 ---
 
 ## Support
 
-These skills work together as a strategic + execution combo:
-- Use **signal-skill-framework** first to plan
-- Then **skill-creator** to build and test
+- **signal-skill-framework** → strategic planning ("what to build")
+- **skill-creator** → execution ("how to build it")
 
-The Signal Framework tells you *what* to build; Skill Creator shows you *how* to build it.
+Both work together. Start with Signal Framework, then hand off to Skill Creator.
+
+---
+
+## License
+
+Apache 2.0 — See LICENSE file
+
+---
+
+## Repo Structure
+
+```
+create-effective-skills/
+├── README.md                    # This file
+├── LICENSE                     # Apache 2.0
+├── INSTALL_PROMPT.md           # Copy-paste install instructions for AI agents
+├── signal-skill-framework/    # Skill 1: Strategic planning
+│   ├── SKILL.md
+│   └── prompts/
+│       └── signal_skill_architect.md
+└── skill-creator/             # Skill 2: Execution & testing
+    ├── SKILL.md
+    ├── scripts/              # Python evaluation scripts
+    ├── agents/               # Grader, comparator, analyzer prompts
+    ├── eval-viewer/          # HTML evaluation viewer
+    ├── references/          # Schemas and documentation
+    └── assets/              # Templates
+```
