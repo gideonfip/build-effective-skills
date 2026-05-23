@@ -9,8 +9,8 @@ The user is a non-coder looking to build time leverage with AI. They avoid "prom
 
 ## The SIGNAL Framework
 
-- **S (Spot the Bottleneck)**: Identify a repeatable, soul-sucking task.
-- **I (Integrate the Stack)**: Determine minimal tooling (prompts, APIs, MCPs, scripts).
+- **S (Spot the Bottleneck)**: Identify the outcome, then find the repeatable soul-sucking task in the workflow that blocks it.
+- **I (Integrate the Stack)**: Determine the minimal tooling (prompts, APIs, MCPs, scripts). First scan public skill and integration libraries for useful components, then compose the stack from what exists or recommend the best custom path.
 - **G (Guide the Agent)**: Manual execution. Walk the AI through the task like a new employee.
 - **N (Nail the Standard)**: Iterate until a perfect "gold standard" run is achieved.
 - **A (Automate the Logic)**: Use `/skill-creator` to codify the run into a `SKILL.md`.
@@ -34,14 +34,28 @@ The AI doesn't think - it predicts tokens based on patterns. Without experientia
 ## Step-by-Step Execution
 
 ### S - Spot the Bottleneck
-- Focus on "soul-sucking" tasks - repeatable but mentally draining work
-- If it's not repeatable, it's not a skill
-- If it's not soul-sucking, the ROI on automating it is too low
-- **Challenge:** "Is this actually repeatable, or is it a one-off?"
+- Start with the outcome: ask what result the user wants to get faster, cheaper, or better.
+- Ask them to describe the usual workflow they currently use to achieve that outcome.
+- Focus on the "soul-sucking" task inside that workflow - repeatable but mentally draining work.
+- Identify the bottleneck that could run on autopilot if turned into a skill.
+- If it's not repeatable, it's not a skill.
+- If it's not soul-sucking or high-friction, the ROI on automating it is too low.
+- **Challenge:** "Is this actually repeatable, or is it a one-off? What part of the workflow slows you down every time?"
 
 ### I - Integrate the Stack
 - Keep it minimal - "less is more"
-- Identify hard requirements: APIs, MCP servers, custom Python scripts
+- Identify hard requirements: APIs, MCP servers, custom Python scripts, existing prompts, browser automation, or data sources.
+- Before suggesting the stack, scan public skill and integration libraries for inspiration and reusable components:
+  - Install the `browse` CLI when needed to inspect public skill sites efficiently: `npm i -g browse`
+  - `https://skillsmp.com/`
+  - `https://skillsllm.com/`
+  - `https://mcpmarket.com/tools/skills`
+  - `https://skills.sh/`
+- Use the Skyscraper principle: inspect what already exists, borrow the best components, then compose a sharper workflow around the user's exact bottleneck.
+- Treat public skills as references, not dependencies. Do not download and run random AI agent skills from the internet. Study what a skill does, decide whether its tools and workflow fit the current system, then build a clean in-house version around the user's actual workflow.
+- Frame this as a practical security habit, not paranoia: public skills can contain unsafe prompts or assumptions that do not match the current environment. The safer default is to inspect, adapt, and rebuild.
+- If no useful tool or skill exists, say so and recommend the simplest custom approach based on the workflow.
+- Suggest which parts AI can automate, which parts need deterministic scripts, and which parts still need human judgment.
 - **Skills vs agent.md:** Skills use progressive disclosure (53 tokens vs 944+ tokens)
 - Only use agent.md for proprietary info that must be in every turn
 
@@ -142,12 +156,21 @@ When the skill fails:
 **The Workflow:**
 
 1. **S - Spot the Bottleneck**:
-   - Ask the user to describe a task they hate doing every day.
+   - Ask the user what outcome they want to achieve faster, cheaper, or better.
+   - Ask them to describe the usual workflow they use to get that outcome today.
+   - Identify the soul-sucking, repeatable task inside that workflow.
    - Challenge them: "Is this actually repeatable, or is it a one-off? If it's not repeatable, it's not a skill."
-   - Once a soul-sucking, repeatable task is identified, move to I.
+   - Once the outcome, workflow, and repeatable bottleneck are clear, move to I.
 
 2. **I - Integrate the Stack**:
-   - Ask: "What tools are actually needed for this? (APIs, MCPs, specific scripts, or just a set of prompts)."
+   - Ask: "What tools are actually needed for this? (APIs, MCPs, specific scripts, existing skills, browser automation, or just a set of prompts)."
+   - Search relevant skill and integration marketplaces for existing pieces before inventing the stack from scratch.
+   - Install the `browse` CLI when useful for this discovery step: `npm i -g browse`.
+   - Use `skillsmp.com`, `skillsllm.com`, `mcpmarket.com/tools/skills`, and `skills.sh` as inspiration sources when web access is available.
+   - Treat anything found there as reference material only. Do not tell the user to download and run third-party skills wholesale.
+   - Preferred pattern: "Look at what this skill does. I want something similar. Think about how it fits our workflow, then build our own version for this system."
+   - Present what you found, what can be reused conceptually, and what still needs to be custom.
+   - If there are no useful existing tools, recommend the simplest custom stack based on your judgment.
    - Help them strip away the noise. Find the minimal viable stack.
    - Confirm the stack is ready before moving to G.
 

@@ -13,8 +13,8 @@ disable-model-invocation: false
 
 | Phase | Action | Key Question |
 |-------|--------|--------------|
-| **S** | Spot the Bottleneck | What soul-sucking task do you hate doing every day? |
-| **I** | Integrate the Stack | What minimal tools are needed? (APIs, MCPs, scripts) |
+| **S** | Spot the Bottleneck | What soul-sucking repeatable task blocks the outcome you want? |
+| **I** | Integrate the Stack | What minimal tools are needed? First scan what exists, then choose APIs, MCPs, scripts, or prompts. |
 | **G** | Guide the Agent | Walk the AI through step-by-step like training a new employee |
 | **N** | Nail the Standard | Iterate until zero manual corrections (the "gold standard" run) |
 | **A** | Automate the Logic | Use `/skill-creator` to codify the successful run |
