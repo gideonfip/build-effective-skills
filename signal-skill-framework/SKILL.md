@@ -1,6 +1,6 @@
 ---
 name: signal-skill-framework
-description: "Guide users through the SIGNAL framework to transform soul-sucking, repeatable tasks into production-ready AI skills. Use this skill whenever a user wants to create a new AI skill, automate a repetitive workflow, or mentions the SIGNAL framework. It acts as a thought partner to move from 'prompt-guessing' to 'skill-architecting' by ensuring a gold-standard run is achieved before codification."
+description: "Guide users through the SIGNAL framework to shape vague problems into crystal-clear, agent-ready problem statements and transform them into production-ready AI skills. Use this skill whenever a user wants to create a new AI skill, automate a repetitive workflow, or mentions the SIGNAL framework. It acts as a thought partner to move from 'prompt-guessing' to 'skill-architecting' by ensuring a gold-standard run is achieved before codification."
 user-invokable: true
 disable-model-invocation: false
 ---
@@ -13,7 +13,7 @@ disable-model-invocation: false
 
 | Phase | Action | Key Question |
 |-------|--------|--------------|
-| **S** | Spot the Bottleneck | What soul-sucking repeatable task blocks the outcome you want? |
+| **S** | Shape the Problem | Apply OWB (Outcome → Workflow → Bottleneck): what does success look like, what are the atomic steps, and where is the friction? |
 | **I** | Integrate the Stack | What minimal tools are needed? First scan what exists, then choose APIs, MCPs, scripts, or prompts. |
 | **G** | Guide the Agent | Walk the AI through step-by-step like training a new employee |
 | **N** | Nail the Standard | Iterate until zero manual corrections (the "gold standard" run) |

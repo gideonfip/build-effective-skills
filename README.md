@@ -34,7 +34,7 @@ Strategic thinking partner using the SIGNAL methodology:
 
 | Phase | Meaning |
 |------|---------|
-| **S**pot | Identify soul-sucking repetitive tasks |
+| **S**hape | Shape the problem (OWB: Outcome → Workflow → Bottleneck) |
 | **I**ntegrate | Select minimal tools needed |
 | **G**uide | Train the AI step-by-step |
 | **N**ail | Achieve gold-standard runs |
